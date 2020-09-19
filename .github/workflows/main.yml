@@ -10,7 +10,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Pass parameters to the action.yml
-        uses: danzarov/ecr-push-action 
+        uses: danzarov/ecr-push-action@v1
         id: ecr-push
         with:
           BUILD_IMAGE_DIR: 'my_building_directory'          
