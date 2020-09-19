@@ -2,21 +2,17 @@
 
 This action pushes a docker image to ECR.
 
-## Inputs
+## Variables
 
-### `BUILD_IMAGE_DIR` => The directory you build your docker images.
+| Key | Value | Suggested Type | Required |
+| ------------- | ------------- | ------------- | ------------- |
+| `BUILD_IMAGE_DIR` | Directory to build the images | `with` | **Yes** |
+| `DOCKER_IMG_TAG` | Docker Image tag | `with` | **Yes** |
+| `AWS_ACCESS_KEY_ID` | AWS KEY ID  | `secret` | **Yes** |
+| `AWS_SECRET_ACCESS_KEY` | AWS SECRET ACCESS KEY| `secret` | **Yes** |
+| `AWS_REGION` | AWS REGION | `secret` | **Yes** |
+| `URI_REPO` | Your ECR URI  | `secret` | **Yes** |
 
-### `DOCKER_IMG_TAG` => The tag you want to give to your docker image.
-
-## Secrets (Don't forget to create your secrets, otherwise it will fail.)
-
-### `AWS_ACCESS_KEY_ID`
-
-### `AWS_SECRET_ACCESS_KEY`
-
-### `AWS_REGION`
-
-### `URI_REPO` 
 
 ## Example usage
 
@@ -33,7 +29,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Pass parameters to the action.yml
-        uses: danzarov/ecr-push-action@v1
+        uses: danzarov/ecr-push-action@v1.2
         id: ecr-push
         with:
           BUILD_IMAGE_DIR: 'my_building_directory'          
