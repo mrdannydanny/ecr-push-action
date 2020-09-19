@@ -4,7 +4,7 @@ inputs:
   BUILD_IMAGE_DIR:
     description: 'Directory used to build the docker image.'
     required: true
-    default: '.'
+    default: 'my_building_directory'
   DOCKER_IMG_TAG:
     description: 'The tag for your docker image.'
     required: true

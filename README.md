@@ -14,6 +14,8 @@ This action pushes a docker image to ECR.
 | `URI_REPO` | Your ECR URI  | `secret` | **Yes** |
 
 
+**note: you must specify a directory to build your image or create a dir named my_building_directory** 
+
 ## Example usage
 
 ```
