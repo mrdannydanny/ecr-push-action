@@ -1,0 +1,17 @@
+name: 'ecr-push-action'
+description: 'Push a docker image to ECR.'
+inputs:
+  BUILD_IMAGE_DIR:
+    description: 'Directory used to build the docker image.'
+    required: true
+    default: '.'
+  DOCKER_IMG_TAG:
+    description: 'The tag for your docker image.'
+    required: true
+    default: '1.0'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.BUILD_IMAGE_DIR }}
+    - ${{ inputs.DOCKER_IMG_TAG }}
