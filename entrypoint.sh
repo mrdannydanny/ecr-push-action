@@ -1,7 +1,6 @@
 #!/bin/bash
 set -e
 
-
 for item in AWS_ACCESS_KEY_ID AWS_SECRET_ACCESS_KEY AWS_REGION ; do
     if [ -z "${!item}" ]; then
         echo "$item is required."
