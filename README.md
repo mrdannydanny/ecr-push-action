@@ -18,6 +18,8 @@ This action pushes a docker image to ECR.
 
 ## Example usage
 
+Place in a .yml file such as this one in your .github/workflows folder.
+
 ```
 on: [push]
 
